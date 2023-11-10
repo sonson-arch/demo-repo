@@ -20,5 +20,6 @@ $path = "C:\Users\Sondre Søndergaard\OneDrive - NTNU\DIGSEC\Høst 23\DCST1001 -
 $courseArray | ForEach-Object {
     $folder = Join-Path -Path $path -ChildPath $_
     New-Item -ItemType Directory -Path $folder
+    New-Item -ItemType File -Path $folder -Name "testfile.txt" -Value "This is test file $_"
     # Remove-Item -Path $folder -Recurse -Force
 }
