@@ -1,10 +1,10 @@
 $courseArray = @(
-"DCST1001 - Infrastruktur: grunnleggende ferdigheter",
+"DCST1001 - Infrastruktur grunnleggende ferdigheter",
 "DCST1002 - Cybersikkerhet og teamarbeid",
 "DCST1003 - Grunnleggende programmering",
 "DCST1004 - Matematikk for informatikk",
 "HMS0002  - HMS-kurs for 1. årsstudenter",
-"DCST1005 - Infrastruktur: sikre grunntjenester",
+"DCST1005 - Infrastruktur sikre grunntjenester",
 "DCST1006 - Datakommunikasjon og nettverk",
 "DCST1007 - Objektorientert programmering",
 "IDATT2002 - Databaser",
@@ -21,5 +21,5 @@ $courseArray | ForEach-Object {
     $folder = Join-Path -Path $path -ChildPath $_
     New-Item -ItemType Directory -Path $folder
     New-Item -ItemType File -Path $folder -Name "testfile.txt" -Value "This is test file $_"
-    # Remove-Item -Path $folder -Recurse -Force
+    #Remove-Item -Path $folder -Recurse -Force
 }
